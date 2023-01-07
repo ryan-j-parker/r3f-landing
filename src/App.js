@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+/* eslint-disable react/no-unknown-property */
+import { Canvas } from '@react-three/fiber';
+import Experience from './Experience.js';
 import './App.css';
+import { OrbitControls, PresentationControls, Sparkles } from '@react-three/drei';
+import { Route, Routes } from 'react-router-dom';
+import MainEvent from './MainEvent.js';
+import ShipGame from './ShipGame.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/ship" element={<ShipGame />} />
+        <Route path="/event" element={<MainEvent />} />
+        <Route path="/" element={<Experience />} />
+      </Routes>
+    </>
   );
 }
 
