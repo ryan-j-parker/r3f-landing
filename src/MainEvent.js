@@ -14,61 +14,7 @@ import React, { Suspense } from 'react';
 import { DoubleSide } from 'three';
 import Player from './Player';
 import Torus from './Torus';
-// import { shipPositionState, enemyPositionState, laserPositionState, scoreState } from './gameState';
-import { RecoilRoot, useRecoilState, useRecoilValue } from 'recoil';
-
-// const LASER_RANGE = 100;
-// const LASER_Z_VELOCITY = 1;
-
-// function Lasers() {
-//   const lasers = useRecoilValue(laserPositionState);
-//   return (
-//     <group>
-//       {lasers.map((laser) => (
-//         <mesh position={[laser.x, laser.y, laser.z]} key={`${laser.id}`}>
-//           <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-//           <meshStandardMaterial attach="material" emissive="white" wireframe />
-//         </mesh>
-//       ))}
-//     </group>
-//   );
-// }
-
-// function LaserController() {
-//   const shipPosition = useRecoilValue(shipPositionState);
-//   const [lasers, setLasers] = useRecoilState(laserPositionState);
-//   return (
-//     <mesh
-//       position={[0, 0, -8]}
-//       onClick={() =>
-//         setLasers([
-//           ...lasers,
-//           {
-//             id: Math.random(), // This needs to be unique.. Random isn't perfect but it works. Could use a uuid here.
-//             x: 0,
-//             y: 0,
-//             z: 0,
-//             velocity: [shipPosition.rotation.x * 6, shipPosition.rotation.y * 5],
-//           },
-//         ])
-//       }
-//     >
-//       <planeBufferGeometry attach="geometry" args={[100, 100]} />
-//       <meshStandardMaterial attach="material" color="orange" emissive="#ff0860" visible={false} />
-//     </mesh>
-//   );
-// }
-
-// function distance(p1, p2) {
-//   const a = p2.x - p1.x;
-//   const b = p2.y - p1.y;
-//   const c = p2.z - p1.z;
-
-//   return Math.sqrt(a * a + b * b + c * c);
-// }
-
 export default function MainEvent() {
-  // const logoImg = useTexture('/r-fav.png');
 
   return (
     <>
